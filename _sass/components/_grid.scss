@@ -1,0 +1,35 @@
+//================================================================================
+// Columns
+//================================================================================
+
+$row-gutter: em(10);
+
+.row {
+	@include clearfix;
+	margin-left: -$row-gutter;
+	margin-right: -$row-gutter;
+	padding-bottom: em(20);
+}
+
+.column {
+	position: relative;
+	width: 100%;
+	padding-left: $row-gutter;
+	padding-right: $row-gutter;
+	float: left;
+	.panel {
+		border: solid 1px #d9d9d9;
+		//margin-bottom: em(20);
+		padding: em(20);;
+		background: #f2f2f2;
+	}
+	&.column-2 {
+		width: 50%;
+	}
+	&.column-3 {
+		width: 33.33333%;
+	}
+	&.column-4 {
+		width: 25%;
+	}
+}

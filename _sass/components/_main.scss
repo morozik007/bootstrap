@@ -1,0 +1,21 @@
+//================================================================================
+// Main Styles
+//================================================================================
+
+.main-navigation {
+	background: #fafafa;
+	@include gap;
+	li {
+		display: inline-block;
+		background: blue;
+		vertical-align: top;
+		letter-spacing: normal;
+		word-spacing: normal;
+		a {
+			color: #fff;
+			text-decoration: none;
+			@extend button;
+		}
+	}
+}
+

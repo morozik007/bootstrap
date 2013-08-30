@@ -1,0 +1,50 @@
+//================================================================================
+// JQuery UI tabs
+//================================================================================
+
+.tabs-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	@include clearfix;
+	position: relative;
+	z-index: 100;
+	li {
+		float: left;
+		margin-right: em(5);
+		&.ui-state-active {
+			a {
+				background: lighten(#ccc, 18%);
+				border-bottom: solid 1px lighten(#ccc, 18%);
+			}
+		}
+		a {
+			display: block;
+			padding: em(10);
+			background: #fff;
+			border: solid 1px #ccc;
+			outline: none;
+			color: #000;
+			text-decoration: none;
+			
+			-webkit-transition: background-color 200ms ease-out;
+			-moz-transition: background-color 200ms ease-out;
+			transition: background-color 200ms ease-out;
+			&:hover {
+				background: lighten(#ccc, 19%);
+			}
+		}
+	}
+}
+.tab-panel {
+	border: solid 1px #ccc;
+	background: lighten(#ccc, 18%);
+	padding: em(20);
+	padding-bottom: em(5);
+	margin-top: -1px;
+	position: relative;
+	z-index: 50;
+	p {
+		margin-top: 0;
+	}
+}

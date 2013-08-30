@@ -1,0 +1,69 @@
+//================================================================================
+// Cycle 2 slider
+//================================================================================
+
+.slideshow {
+	width: 50%;
+	position: relative;
+	.main-slider {
+		width: 100%;
+		& > div {
+			width: 100%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.cycle-pager {
+		text-align: center;
+		height: 20px;
+		line-height: 20px;
+		span {
+			cursor: pointer;
+			font-size: 3em;
+			line-height: 20px;
+			color: #ccc;
+			&.cycle-pager-active {
+				color: red;
+			}
+		}
+	}
+	.cycle-nav {
+		position: absolute;
+		top: 50%;
+		z-index: 100;
+		cursor: pointer;
+		width: 50px;
+		height: 50px;
+		margin-top: -25px;
+		background: rgba(255, 255, 255, .5);
+		line-height: 62px;
+		border-radius: 99px;
+	}
+	.cycle-prev {
+		left: 20px;
+		padding-left: 7px;
+		&:hover {
+			i {
+				@include triangle(22px, #ccc, left);
+			}
+		}
+		i {
+			display: inline-block;
+			@include triangle(22px, #000, left);
+		}
+	}
+	.cycle-next {
+		right: 20px;
+		padding-left: 22px;
+		&:hover {
+			i {
+				@include triangle(22px, #ccc, right);
+			}
+		}
+		i {
+			display: inline-block;
+			@include triangle(22px, #000, right);
+		}
+	}
+}
